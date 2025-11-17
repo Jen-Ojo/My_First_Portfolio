@@ -1,26 +1,57 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Portfolio</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My First Portfolio — Home</title>
+<style>
+body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; max-width: 900px; margin: 2rem auto; line-height: 1.6; padding: 0 1rem; }
+header { border-bottom: 1px solid #e6e6e6; padding-bottom: 1rem; margin-bottom: 1rem; }
+nav a { margin-right: 1rem; text-decoration: none; color: #0366d6; }
+.hero { margin: 1.25rem 0; }
+img.clickable { max-width: 220px; height: auto; display: block; margin: 0.5rem 0; }
+</style>
 </head>
 <body>
+<header>
+<h1>Schedule for TechCon 2024</h1>
+<nav aria-label="Main navigation">
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="schedule.html">Schedule</a>
+<a href="tweets.html">Tweets</a>
+</nav>
+</header>
 
-    <h1>Welcome to My Portfolio</h1>
-    <p>This is my first HTML project where I practice basic web design.</p>
 
-    <h2>About Me</h2>
-    <p>I am learning HTML, CSS, JavaScript, and how to build strong web pages.</p>
+<main>
+<section class="hero" aria-labelledby="intro-heading">
+<h2 id="intro-heading">Welcome to my portfolio</h2>
+<h3>What you'll find here</h3>
+<p>This is a simple, accessible homepage created for the My_First_Portfolio project. It demonstrates headings, paragraphs, navigation and an accessible clickable image. Use it as the starting point or replace sections to match your own content.</p>
+<p>The page includes semantic structure — header, nav and main — so screen readers and search engines can understand the layout. Keep your content clear and use <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code> and <code>&lt;h3&gt;</code> for headings in proper order.</p>
+<p>Below is a clickable image. The image itself has descriptive alternative text for accessibility, and the link wraps the image so clicking the image will navigate to the linked site.</p>
+<p>Feel free to edit this file inside the html_basic directory and push changes to your GitHub repository (My_First_Portfolio) when you're ready.</p>
 
-    <h3>My Goals</h3>
-    <p>I want to become a professional developer and build amazing projects.</p>
 
-    <p>Here is an image you can click to visit my favorite website:</p>
+<!-- Clickable image: the anchor wraps the image so the image is clickable -->
+<a href="https://alx.com" target="_blank" rel="noopener noreferrer" aria-label="Visit ALX website">
+<img class="clickable" src="https://i.ibb.co/gTDZZT8/ALX-Logo-07.png" alt="ALX logo — click to visit ALX website">
+</a>
 
-    <a href="https://www.alxafrica.com" target="_blank">
-        <img src="https://i.ibb.co/gTDZZT8/ALX-Logo-07.png" alt="Clickable Logo" width="200">
-    </a>
 
+</section>
+</main>
+
+
+<footer>
+<p>© <span id="year"></span> Your Name — <a href="https://github.com/YourUsername/My_First_Portfolio">Project on GitHub</a></p>
+</footer>
+
+
+<script>
+// small script to update footer year
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
 </body>
 </html>
